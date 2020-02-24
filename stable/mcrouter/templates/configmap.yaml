@@ -26,5 +26,21 @@ data:
       },
       "route": "PoolRoute|A"
     }
+    {{- else }}
+      {{- if .Values.mcrouterCommandParams.memcachedAddress }}
+    {
+      "pools": {
+        "A": {
+          "servers": [
+            {{- $global := . }}
+            {{- range $i, $e := until (.Values.memcached.replicaCount | int) }}
+            "{{ $global.Values.mcrouterCommandParams.memcachedAddress }}-memcached-{{ $i }}.{{ $global.Values.mcrouterCommandParams.memcachedAddress }}-memcached.{{ $global.Release.Namespace }}.svc.cluster.local:11211",
+            {{- end }}
+          ]
+        }
+      },
+      "route": "PoolRoute|A"
+    }
+      {{- end }}
     {{- end }}
 {{- end }}
