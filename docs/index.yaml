@@ -3,9 +3,9 @@ entries:
   mcrouter:
   - apiVersion: v1
     appVersion: 0.36.0
-    created: 2020-03-13T11:10:07.20133349Z
+    created: 2020-03-17T11:10:39.408112152Z
     description: Mcrouter is a memcached protocol router for scaling memcached deployments.
-    digest: f38813e3d38f6449cf447e1dc66b2a94084657adb29b6f3e690ffc847a6f32ec
+    digest: 1df9cf2bfb10cd620091d97f6daeb1290853566ce0c6026bc1cc6b8deaa3dd2c
     engine: gotpl
     home: https://github.com/facebook/mcrouter
     maintainers:
@@ -18,4 +18,4 @@ entries:
     urls:
     - https://team-blaze.github.io/helm-charts/mcrouter-1.0.2.tgz
     version: 1.0.2
-generated: 2020-03-13T11:10:07.200288795Z
+generated: 2020-03-17T11:10:39.406996613Z
